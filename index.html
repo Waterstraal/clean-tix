@@ -3,49 +3,11 @@
     <title>Clean TIX bookmarklet</title>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body,
-        html {
-            height: 100%;
-            margin: 0;
-            background-color: lightyellow;
-            color: #333;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 1.3em;
-        }
-
-        h1 {
-            font-size: 1.5em;
-            margin: 0;
-        }
-
-        ol {
-            margin: 0;
-        }
-
-        p {
-            font-size: 0.7em;
-            font-style: italic;
-        }
-
-        li {
-            padding: 4px;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        div {
-            padding: 16px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
     <script src="tix-bookmarklet.js"></script>
 </head>
 <body>
-<div>
+<div class="centered">
     <h1>Clean TIX bookmarklet</h1>
     <p>The TIX Matrix can take up quite some space, whichs makes it difficult to use.</p>
     <p>This bookmarklet cleans it up, so that you can focus on filling in those hours!</p>
@@ -55,6 +17,13 @@
         <li>Press the bookmarket.</li>
         <li>That's it!</li>
     </ol>
+</div>
+<div class="disclaimer">
+    <div class="tooltip"><span class="tooltip-title">Disclaimer</span>
+        <span class="tooltiptext">Use at your own risk!
+            None of the authors, contributors, administrators, in any way whatsoever, can be responsible for your use of the information contained in or linked from this web page.
+        </span>
+    </div>
 </div>
 <script>
     const bookmarklet = document.getElementById('bookmarklet');
