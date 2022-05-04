@@ -60,8 +60,9 @@ body {
 .tooltip .tooltiptext {
     visibility: hidden;
 
+    box-sizing: border-box;
     text-align: left;
-    width: 500px;
+    width: 350px;
     background-color: #555;
     color: #fff;
     border-radius: 6px;
@@ -74,7 +75,7 @@ body {
     z-index: 1;
     bottom: 100%;
     left: 50%;
-    margin-left: -250px;
+    margin-left: -175px;
     margin-bottom:4px;
 }
 
