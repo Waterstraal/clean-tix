@@ -19,7 +19,8 @@ const bookmarkletCode = () => {
             $('.matrix-cell-component').removeClass('is-focussed');
         });
 
-        const styles = '.weeknr { background-color: antiquewhite !important; font-size: 0.7em !important; font-style: italic; } ' +
+        const styles =
+            '.weeknr { background-color: antiquewhite !important; font-size: 0.7em !important; font-style: italic; } ' +
             '.type-of-work-title .toggle {display: none !important;} ' +
             '.nested-matrix-row-component-level-2>div:first-child {margin-left:20px !important;} ' +
             '.is-focussed, .is-focussed .input { background-color: lightyellow !important; } ' +
