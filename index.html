@@ -8,8 +8,8 @@
 </head>
 <body>
 <div class="centered">
-    <h1>Clean TIX bookmarklet</h1>
-    <p>The TIX Matrix can take up quite some space, whichs makes it difficult to use.</p>
+    <h1>Clean TIX bookmarklet<span id="version"></span></h1>
+    <p>The TIX Matrix can take up quite some space, which makes it difficult to use.</p>
     <p>This bookmarklet cleans it up, so that you can focus on filling in those hours!</p>
     <ol>
         <li>Drag this link to your bookmarks bar: <a id="bookmarklet">Clean TIX</a>.</li>
@@ -28,6 +28,8 @@
 <script>
     const bookmarklet = document.getElementById('bookmarklet');
     bookmarklet.href = `javascript: (${bookmarkletCode})();`;
+
+    document.getElementById('version').innerText = 'v' + version;
 </script>
 </body>
 </html>

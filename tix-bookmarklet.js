@@ -1,9 +1,11 @@
+const version = '1.0.1' ;
+
 const bookmarkletCode = () => {
     const body$ = $('body');
     const cleaned = body$.data('cleaned');
-    if (!cleaned) {
-        const matrix$ = $('.matrix-component');
 
+    function mergeMatrixRows(matrixContainer$) {
+        const matrix$ = matrixContainer$.find('.matrix-component:eq(0)');
         matrix$.find('.type-of-work-title:contains(Direct hours)').each((v, el) => {
             const $el = $(el);
             const $topLevel = $el.parent().parent().prev();
@@ -12,13 +14,26 @@ const bookmarkletCode = () => {
             $el.find('.title-part-item').append(': ' + dsc);
             $topLevel.hide();
         });
+    }
 
-        matrix$.on('focus', '.input', (el) => {
+    if (!cleaned) {
+
+        const matrixContainer$ = $('.webGrid:eq(0)');
+        mergeMatrixRows(matrixContainer$);
+
+        const observer = new MutationObserver((mutationsList, observer) => {
+            if(mutationsList.filter(m => m.target.classList.contains('matrix-component')).length > 0) {
+                mergeMatrixRows(matrixContainer$);
+            }
+        });
+        observer.observe(document.getElementsByClassName('webGrid')[0], {attributes: true, childList: false, subtree: true});
+
+        matrixContainer$.on('focus', '.matrix-component .input', (el) => {
             const index = $(el.currentTarget).parents('.matrix-cell-component').index() + 1;
             $('.matrix-cell-component:nth-child(' + index + ')').addClass('is-focussed')
         });
 
-        matrix$.on('blur', '.input', () => {
+        matrixContainer$.on('blur', '.matrix-component .input', () => {
             $('.matrix-cell-component').removeClass('is-focussed');
         });
 

@@ -82,3 +82,9 @@ body {
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
+
+#version {
+    margin-left: 16px;
+    font-size: 30%;
+    color: grey;
+}
