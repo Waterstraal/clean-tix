@@ -5,31 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <script src="tix-bookmarklet.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
 </head>
 <body>
-<div class="centered">
-    <h1>Clean TIX bookmarklet<span id="version"></span></h1>
-    <p>The TIX Matrix can take up quite some space, which makes it difficult to use.</p>
-    <p>This bookmarklet cleans it up, so that you can focus on filling in those hours!</p>
-    <ol>
-        <li>Drag this link to your bookmarks bar: <a id="bookmarklet">Clean TIX</a>.</li>
-        <li>Navigate to the <a href="https://90836.afasinsite.nl/aanpassen-mijn-uren-per-week-matrix-prs/uren-boeken-per-week-insite-matrix">TIX Matrix</a>.</li>
-        <li>Press the bookmarket.</li>
-        <li>That's it!</li>
-    </ol>
-</div>
-<div class="disclaimer">
-    <div class="tooltip"><span class="tooltip-title">Disclaimer</span>
-        <span class="tooltiptext">Use at your own risk!
-            None of the authors, contributors, administrators, in any way whatsoever, can be responsible for your use of the information contained in or linked from this web page.
-        </span>
+    <div class="centered">
+        <h1>Clean TIX bookmarklet<span id="version"></span></h1>
+        <p>The TIX Matrix can take up quite some space, which makes it difficult to use.</p>
+        <p>This bookmarklet cleans it up, so that you can focus on filling in those hours!</p>
+        <ol>
+            <li>Drag this link to your bookmarks bar: <a id="bookmarklet">Clean TIX</a>.</li>
+            <li>Navigate to the <a href="https://90836.afasinsite.nl/aanpassen-mijn-uren-per-week-matrix-prs/uren-boeken-per-week-insite-matrix">TIX Matrix</a>.</li>
+            <li>Press the bookmarket.</li>
+            <li>That's it!</li>
+        </ol>
     </div>
-</div>
-<script>
-    const bookmarklet = document.getElementById('bookmarklet');
-    bookmarklet.href = `javascript: (${bookmarkletCode})();`;
+    <div class="disclaimer">
+        <div class="tooltip"><span class="tooltip-title">Disclaimer</span>
+            <span class="tooltiptext">Use at your own risk!
+                None of the authors, contributors, administrators, in any way whatsoever, can be responsible for your use of the information contained in or linked from this web page.
+            </span>
+        </div>
+    </div>
+    <script>
+        const bookmarklet = document.getElementById('bookmarklet');
+        bookmarklet.href = `javascript: (${bookmarkletCode})();`;
 
-    document.getElementById('version').innerText = 'v' + version;
-</script>
+        document.getElementById('version').innerText = 'v' + version;
+    </script>
+
+    <a class="github-fork-ribbon" href="https://github.com/waterstraal/clean-tix/" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
 </body>
 </html>

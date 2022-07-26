@@ -88,3 +88,5 @@ body {
     font-size: 30%;
     color: grey;
 }
+
+.github-fork-ribbon:before { background-color: #555 !important; }
