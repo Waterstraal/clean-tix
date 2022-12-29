@@ -1,4 +1,4 @@
-const version = '1.0.3' ;
+const version = '1.0.4' ;
 
 const bookmarkletCode = () => {
     const body$ = $('body');
@@ -43,7 +43,8 @@ const bookmarkletCode = () => {
             '.nested-matrix-row-component-level-2>div:first-child {margin-left:20px !important;} ' +
             '.is-focussed, .is-focussed .input { background-color: lightyellow !important;} ' +
             '.input { transition: none !important;} ' +
-            '.input:focus, .input:hover { background-color: white !important; outline-width: 2px !important; outline-offset: -2px; box-shadow: none !important;} ' +
+            '.input:focus, .input:hover { outline-style: auto !important; outline-offset: -2px !important; box-shadow: none !important;}' +
+            '.input:focus { background-color: white !important; }  ' +
             '.rea-list-icon.remove { display:none; }';
 
         $('<style>').text(styles).appendTo(document.head);
