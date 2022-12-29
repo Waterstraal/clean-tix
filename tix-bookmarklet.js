@@ -41,9 +41,10 @@ const bookmarkletCode = () => {
             '.weeknr { background-color: antiquewhite !important; font-size: 0.7em !important; font-style: italic; } ' +
             '.type-of-work-title .toggle {display: none !important;} ' +
             '.nested-matrix-row-component-level-2>div:first-child {margin-left:20px !important;} ' +
-            '.is-focussed, .is-focussed .input { background-color: lightyellow !important; } ' +
-            '.input { transition: none !important; } ' +
-            '.input:focus { background-color: white !important; outline-width: 1px !important; box-shadow: none !important; }';
+            '.is-focussed, .is-focussed .input { background-color: lightyellow !important;} ' +
+            '.input { transition: none !important;} ' +
+            '.input:focus { background-color: white !important; outline-width: 1px !important; box-shadow: none !important;} ' +
+            ' .rea-list-icon.remove {display:none}';
 
         $('<style>').text(styles).appendTo(document.head);
 
