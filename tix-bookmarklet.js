@@ -1,4 +1,4 @@
-const version = '1.1.0' ;
+const version = '1.1.1' ;
 
 const bookmarkletCode = () => {
     const body$ = $('body');
@@ -52,6 +52,8 @@ const bookmarkletCode = () => {
             '.matrix-cell-component-column-title { overflow: hidden !important; }  ' +
             '.title__day-name { visibility: hidden !important; }  ' +
             '.title__day-name:first-letter { visibility: visible !important; }  ' +
+            '.enlarge-icon { display: none !important; }  ' +
+            '.icons-right > * { cursor: pointer !important; }  ' +
             '.rea-list-icon.remove { display:none; }';
 
         $('<style>').text(styles).appendTo(document.head);
