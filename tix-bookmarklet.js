@@ -39,7 +39,8 @@ const bookmarkletCode = () => {
 
         const sidePanel$ = $('.webGrid-side-panel');
 
-        const x$ = $('.icons-right').prepend('<span>[X]</span>');
+        // Icon attrib: https://icons8.com/icon/f8SrarlsFdYF/show-right-side-panel
+        const x$ = $('.icons-right').prepend('<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABNklEQVR4nN2VMUvDQBSAn6DiKCg4FMQ4urkHBMVqIAFDSELI5lgbu4ilv6MWlOZXCA7i4hwJGTIEB4cUMgRCL3eY+UkiSms7JVaID771++5ueAfwrwYRlwkhO2ma7paBEMLljrlyxtgZpZQyxrAKhJB313XPf558KU3T8d3tPbZb/dJYF320hw+YJEnGcdzWd4BSupHXL9s3+DrGSnSsQXET0zSbk8+zWQSsQSnp1fMnkwFd14WFBlRVPZ0JdH4xoGnayUIDiqI0FxqQZfm43gFJkmoeEEXxqN4BQRAO/y5ACFn/WnZemKE3KkmYFY7cxfP8wdTKjuP47enxBXtdG3vXw3J0bcwdYRiOAGBvKuA4zn4QBG4URXEVfN/3DMNoAcDazK8GAKsA0ACA7Qo0AGBlnrye8wEJv1lwNJJMtQAAAABJRU5ErkJggg==">');
         x$.on('click', () => sidePanel$.toggle());
 
         const styles =
