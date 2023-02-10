@@ -37,6 +37,11 @@ const bookmarkletCode = () => {
             $('.matrix-cell-component').removeClass('is-focussed');
         });
 
+        const sidePanel$ = $('.webGrid-side-panel');
+
+        const x$ = $('.icons-right').prepend('<span>[X]</span>');
+        x$.on('click', () => sidePanel$.toggle());
+
         const styles =
             '.weeknr { background-color: antiquewhite !important; font-size: 0.7em !important; font-style: italic; } ' +
             '.type-of-work-title .toggle {display: none !important;} ' +
