@@ -45,6 +45,7 @@ const bookmarkletCode = () => {
             '.input { transition: none !important;} ' +
             '.input:focus, .input:hover { outline-style: auto !important; outline-offset: -2px !important; box-shadow: none !important;}' +
             '.input:focus { background-color: white !important; }  ' +
+            '.matrix-cell-component-column-title { overflow: hidden !important; }  ' +
             '.rea-list-icon.remove { display:none; }';
 
         $('<style>').text(styles).appendTo(document.head);
