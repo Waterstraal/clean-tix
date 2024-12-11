@@ -1,9 +1,9 @@
-const version = '3.0.0';
-
 const bookmarkletCode = () => {
+    const version = 'v3.0.0';
+
     const loadjQuery = (callback) => {
         const script = document.createElement('script');
-        script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
+        script.src = 'https://code.jquery.com/jquery-3.7.1.slim.js';
         script.type = 'text/javascript';
         script.onload = callback;
         document.head.appendChild(script);
@@ -62,6 +62,9 @@ const bookmarkletCode = () => {
 
             $('.icons-right').prepend([ufoTitle$, ufoBtn$, toggleSidePanelBtn$]);
 
+            const cleanTixVersion$ = $('<div class="clean-tix-version"><a href="https://waterstraal.github.io/clean-tix/" target="_blank">Clean TIX ' + version + '</a></div>');
+            $('body').append([cleanTixVersion$]);
+
             const styles =
                 '.weeknr { background-color: antiquewhite !important; font-size: 0.7em !important; font-style: italic; } ' +
                 '.type-of-work-title .toggle {display: none !important;} ' +
@@ -75,6 +78,8 @@ const bookmarkletCode = () => {
                 '.title__day-name:first-letter { visibility: visible !important; }  ' +
                 '.enlarge-icon { display: none !important; }  ' +
                 '.icons-right > * { cursor: pointer !important; }  ' +
+                '.clean-tix-version { text-align:center; padding: 4px; }  ' +
+                '.clean-tix-version a { color:lightgray; font-size:10px; }  ' +
                 '.rea-list-icon.remove, .ufo-title { display:none; } ' +
                 '.ufo.sitebackground { background: #FFC080 }' +
                 '.ufo #P_C_W_Gridform_Grid { border: 1px solid #343434; border-radius: 10px; overflow: hidden; }' +
